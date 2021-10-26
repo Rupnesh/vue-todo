@@ -1,18 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h3>To Do app</h3>
+    <p>Available Task {{tasksLength}}</p>
+    <ToDo msg="Welcome to Your Vue.js App" @showTasksCount="handleCustom"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ToDo from './components/ToDo.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    ToDo
+  },
+  data() {
+    return {
+      tasksLength: 0,
+    }
+  },
+  methods: {
+    handleCustom(tasks) {
+      console.log("event...",tasks)
+      this.tasksLength = tasks;
+    }
+  },
 }
 </script>
 
