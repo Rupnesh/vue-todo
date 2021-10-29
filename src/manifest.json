@@ -1,0 +1,27 @@
+{
+    "name": "ToDo App",
+    "description": "To Extension",
+    "version": "1.0.0",
+    "manifest_version": 2,
+
+    "permissions": [
+        "activeTab",
+        "<all_urls>",
+        "*://*/*"
+    ],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "icons": { 
+        "16": "img/1560.png",
+        "48": "img/1560.png",
+        "128": "img/1560.png" 
+    },
+
+    "browser_action": {
+        "default_popup": "index.html"
+    }
+    
+    
+}
