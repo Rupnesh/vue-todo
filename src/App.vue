@@ -8,7 +8,6 @@
 
 <script>
 import ToDo from './components/ToDo.vue'
-
 export default {
   name: 'App',
   components: {
@@ -21,7 +20,6 @@ export default {
   },
   methods: {
     handleCustom(tasks) {
-      console.log("event...",tasks)
       this.tasksLength = tasks;
     }
   },
